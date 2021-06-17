@@ -1,90 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validacion de Formularios</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
 
-    <link rel="stylesheet" href="css/fontello.lnk">
-    <link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="img/icono.ico">
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="stylesheet" href="css/estilos.scss">
 </head>
 <body>
-    <main>
-        <form action="" class="formulario" id="formulario">
-            <!--GRUPO: USUARIO-->
-            <div class="formulario__grupo" id="grupo__usuario">
-                <label for="usuario" class="formulario__label">Usuario</label>
-                <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="usuario" id="usuario" placeholder="Usuario">
-                    <em class="formulario__validacion-estado fas fa-times-circle"></em>
+	<header>
+		<nav class="navbar">
+			<div class="contenedor">
+				<img src="img/logo_white_large.png" alt="">
+			</div>
+		</nav>
+
+		<div class="contenedor-video">
+			<a href="#formulario-1">
+				<video autoplay muted loop src="video/ciudad2.mp4" type="video/mp4"></video>
+			</a>
+		</div>
+	</header>
+
+	<main id="blog">
+		<div class="contenedor">
+			<aside>
+				<button class="switch" id="switch">
+					<span><em class="fas fa-sun"></em></span>
+					<span><em class="fas fa-moon"></em></span>
+				</button>
+
+				<h3 class="titulo">Contenido</h3>
+                <nav class="indice">
+                    <a href="#formulario-1">Creación de Departamentos</a>
+                    <a href="#formulario-2">Creación de Ciudades</a>
+                    <a href="#formulario-3">¿Tiene alguna queja?</a>
+                </nav>
+			</aside>
+
+			<div class="contenido">
+				<div class="caja" id="formulario-1">
+                    <h1>Creación de Departamentos</h1>
+                    <form action="">
+                        <label for="">Nombre del Departamento: <br>
+                            <input type="text" placeholder="Atlantico">
+                        </label> <br>
+
+                        <button>Guardar</button>
+                    </form>
                 </div>
-                <p class="formulario__input-error">El usuario ingresado no puede contener simbolos y debe tener entre 4 y 16 letras</p>
-            </div>
+				
+				<div class="caja" id="formulario-2">
+                    <h1>Creacion de Ciudades</h1>
+                    <form action="">
+                        <label for="">Nombre de la Ciudad: <br>
+                            <input type="text" placeholder="Barranquilla">
+                        </label> <br><br>
 
-            <!--GRUPO: Nombre-->
-            <div class="formulario__grupo" id="grupo__nombre">
-                <label for="nombre" class="formulario__label">Nombre</label>
-                <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Benito Camela">
-                    <em class="formulario__validacion-estado fas fa-times-circle"></em>
+                        <label for="">Seleccione un Departamento: <br>
+                        <select name="select">
+                            <option value="value1" selected>Seleccione...</option>
+                        </select>
+                        </label> <br>
+
+                        <button>Guardar</button>
+                    </form>
                 </div>
-                <p class="formulario__input-error">El nombre no puede contener simbolos ni numeros</p>
-            </div>
+                
+                <div class="caja" id="formulario-3">
+                    <h1>¿Tiene alguna queja?</h1>
+                    <form action="">
+						<label for="">Queja: <br>
+							<textarea name="comentarios" rows="4" cols="40" placeholder="Diganos que problemas esta presentando..."></textarea>
+						</label> <br><br>
 
-            <!--GRUPO: Contraseña-->
-            <div class="formulario__grupo" id="grupo__password">
-                <label for="password" class="formulario__label">Contraseña</label>
-                <div class="formulario__grupo-input">
-                    <input type="password" class="formulario__input" name="password" id="password" placeholder="Contraseña">
-                    <em class="formulario__validacion-estado fas fa-times-circle"></em>
-                </div>
-                <p class="formulario__input-error">La contraseña debe tener de 4 a 12 digitos</p>
-            </div>
+						<label for="">Departamento: <br>
+							<select class="cbx" name="select">
+								<option value="value1" selected>Seleccione...</option>
+							</select>
+						</label> <br>
 
-            <!--GRUPO: Repetir Contraseña-->
-            <div class="formulario__grupo" id="grupo__password2">
-                <label for="password2" class="formulario__label">Repetir Contraseña</label>
-                <div class="formulario__grupo-input">
-                    <input type="password" class="formulario__input" name="password2" id="password2" placeholder="Repetir Contraseña">
-                    <em class="formulario__validacion-estado fas fa-times-circle"></em>
-                </div>
-                <p class="formulario__input-error">Ambas contraseñas deben ser iguales</p>
-            </div>
+                        <button>Enviar</button>
+                    </form>
+                </div>	
+			</div>
+		</div>
+	</main>
 
-            <!--GRUPO: Correo Electronico-->
-            <div class="formulario__grupo" id="grupo__correo">
-                <label for="correo" class="formulario__label">correo</label>
-                <div class="formulario__grupo-input">
-                    <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
-                    <em class="formulario__validacion-estado fas fa-times-circle"></em>
-                </div>
-                <p class="formulario__input-error">El correo solo debe contener letras, numeros, puntos, guiones y guion bajo</p>
-            </div>
+	<footer>
+		<div class="content">
+            <p>Todos los derechos reservados ©2021. Creada por Florez Roger - Muñoz Pedro - Ortega Yannina - Zamudio Jorge</p>
+        </div>
+	</footer>
 
-            <!--GRUPO: Telefono-->
-            <div class="formulario__grupo" id="grupo__telefono">
-                <label for="telefono" class="formulario__label">Telefono</label>
-                <div class="formulario__grupo-input">
-                    <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4304728487">
-                    <em class="formulario__validacion-estado fas fa-times-circle"></em>
-                </div>
-                <p class="formulario__input-error">El telefono no puede contener numeros ni simbolos</p>
-            </div>
-
-            <!--GRUPO: Error y Boton-->
-            <div class="formulario__mensaje" id="formulario__mensaje">
-                <p> <em class="fas fa-exclamation-triangle"></em> <b>ERROR:</b> Por favor rellena el formulario correctamente. </p>
-            </div>
-
-            <div class="formulario__grupo formulario__grupo-btn-enviar">
-                <button type="submit" class="formulario__btn">Enviar</button>
-                <p class="formulario__mensaje-exito" id="formulario__mensaje-exito"> Formulario enviado exitosamente! </p>
-            </div>
-        </form>
-    </main>
-
-    <script src="js/formulario.js"></script>
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
