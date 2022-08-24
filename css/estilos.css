@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -17,7 +16,6 @@ a:hover {
 body {
   font-family: 'calibri';
   background: #f2f2f2;
-  -webkit-transition: .3s ease all;
   transition: .3s ease all;
 }
 
@@ -32,29 +30,24 @@ html {
 /* * ============================== */
 /* * ============ HEADER ========== */
 /* * ============================== */
+
 .navbar {
   background: rgba(173, 145, 68, 0.9);
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
 }
 
 body.dark .navbar {
   background: rgba(37, 46, 73, 0.9);
-  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 .contenedor {
   max-width: 1000px;
   width: 90%;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .contenedor img {
@@ -62,9 +55,19 @@ body.dark .navbar {
   margin: 20px auto 20px auto;
 }
 
-/* * ============================ */
-/* * ===== CONTENEDOR VIDEO====== */
-/* * ============================ */
+/* * ============================= */
+/* * ===== CONTENEDOR VIDEO ====== */
+/* * ============================= */
+
+body.dark .black{
+  display: block;
+}
+
+body.dark .white,
+.black{
+  display: none;
+}
+
 .contenedor-video {
   height: auto;
 }
@@ -73,10 +76,8 @@ body.dark .navbar {
   width: 100%;
   height: 849px;
   vertical-align: top;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 bottom;
-     object-position: 0 bottom;
+  object-fit: cover;
+  object-position: 0 bottom;
 }
 
 /* * ============================== */
@@ -102,15 +103,13 @@ aside {
   background: #1D2F3D;
   padding: 20px;
   border-radius: 3px;
-  position: -webkit-sticky;
   position: sticky;
   top: 20px;
 }
 
 body.dark aside {
   background: #252e49;
-  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 aside .titulo {
@@ -132,8 +131,7 @@ aside .indice a {
 /* * ============================ */
 .caja {
   border-radius: 4px;
-  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.527);
-          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.527);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.527);
   width: 100%;
   margin: 0 0px 50px 0px;
   text-align: center;
@@ -143,8 +141,7 @@ aside .indice a {
 
 body.dark .caja {
   background: #252e49;
-  -webkit-box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
-          box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.16);
 }
 
 .caja h1 {
@@ -177,8 +174,7 @@ body.dark .caja label {
 .caja input:focus {
   border: 3px solid #d4af47;
   outline: none;
-  -webkit-box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
-          box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
+  box-shadow: 3px 0 30px rgba(163, 163, 163, 0.4);
 }
 
 .caja button {
@@ -194,9 +190,7 @@ body.dark .caja label {
   color: #d4af47;
   background-color: #fff;
   border-color: #d4af47;
-  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.527);
-          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.527);
-  -webkit-transition: .3s ease-out all;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.527);
   transition: .3s ease-out all;
 }
 
@@ -238,8 +232,6 @@ footer .content {
   border: none;
   position: relative;
   cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   outline: none;
 }
@@ -255,10 +247,8 @@ footer .content {
   left: 0;
   right: unset;
   border-radius: 100px;
-  -webkit-transition: .3s ease all;
   transition: .3s ease all;
-  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 .switch.active {
@@ -285,28 +275,21 @@ footer .content {
 /* * =========================== */
 @media screen and (max-width: 900px) {
   .navbar .contenedor {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin: 0;
     width: 100%;
   }
   .navbar a {
     width: auto;
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    flex: 1;
   }
   .contenedor-imagen {
     height: 50vh;
   }
   main .contenedor {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   aside {
     display: none;
   }
 }
-/*# sourceMappingURL=estilos.css.map */
